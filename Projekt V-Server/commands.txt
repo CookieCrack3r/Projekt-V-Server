@@ -1,5 +1,4 @@
-ssh-keygen -t ed25519
-/Users/CookieCrack3r/.ssh/DevSecOps/demo_ed25519
+ssh-keygen -t ed25519 -f /Users/CookieCrack3r/.ssh/DevSecOps/demo_ed25519
 
 ssh martin-friedrich@178.105.228.223
 
@@ -8,7 +7,8 @@ ssh-copy-id -i ~/.ssh/DevSecOps/demo_ed25519.pub martin-friedrich@178.105.228.22
 
 type C:\Users\CookieCrack3r\.ssh\DevSecOps\demo_ed25519.pub | ssh martin-friedrich@178.105.228.223 "cat >> .ssh/authorized_keys"
 ssh -i ~/.ssh/DevSecOps/demo_ed25519 martin-friedrich@178.105.228.223
-
+cat /etc/ssh/sshd_config
+ssh -o PubkeyAuthentication=no martin-friedrich@178.105.228.223
 sudo systemctl restart ssh.service
 sudo apt install nginx
 
@@ -20,3 +20,9 @@ sudo touch /var/www/alternatives/alternate-index.html
 sudo nano /etc/nginx/sites-enabled/alternatives
 sudo nano /var/www/alternatives/alternate-index.html
 sudo service nginx restart
+
+
+GITHUB
+
+git config --global user.name "..."
+git config --global user.email "..."
