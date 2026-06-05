@@ -26,3 +26,13 @@ GITHUB
 
 git config --global user.name "..."
 git config --global user.email "..."
+
+#neuen branch erstellen
+git checkout -b setup-blog
+#neuen branch erstellen neuer befehl
+git switch -c setup-blog
+#aktuellen branch anzeigen
+git branch
+
+commit history
+git log --oneline
